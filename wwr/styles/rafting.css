@@ -16,11 +16,37 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-
 }
-header, main, footer {
-    width: 840px;
-    margin: 0, auto;
+
+header {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    justify-items: center;
+    background-color: var(--accent2-color);
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    border: 10px solid var(--accent1-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header a {
+    margin: 20px;
+    text-decoration: none;
+    font-family: var(--body-font);
+    border: 2px solid var(--accent1-color);
+    padding: 3px;
+}
+
+main, footer {
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1, h2 {
@@ -33,17 +59,10 @@ nav, p, section, article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 35px;
-    height: auto;
-}
-
 .hero {
     position: relative;
+    display: flex;
+    
 }
 
 .hero img {
@@ -63,7 +82,76 @@ h1 {
     color: #fff
 }
 
+article {
+    position: absolute;
+    background-color: var(--accent2-color);
+    text-align: center;
+    align-self: center;
+    border: 3px solid black;
+}
+
 .hero article img {
     float: right;
-    width: 125px;
+    width: 200px;
+    height: auto;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.history h2 {
+    text-align: center;
+}
+
+.history img {
+    width: 300px;
+    height: auto;
+}
+
+.images {
+    text-align: center;
+}
+
+.images figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+.images h2 {
+    text-align: center;
+}
+
+.images img {
+  width: 220px;
+  height: 150px;
+}
+
+.images figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+
+.images div {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    justify-content: right;
+}
+
+footer img {
+    width: 35px;
+    height: auto;
 }
